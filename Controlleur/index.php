@@ -8,9 +8,13 @@ $routing = [
         'controller' => 'subscription',
         'secure' => false
     ],
+    'login' => [
+        'controller' => 'login',
+        'secure' => false
+    ],
     'profile' => [
         'controller' => 'profile',
-        'secure' => false
+        'secure' => true
     ],
     'feedback' => [
         'controller' => 'feedback',
@@ -28,7 +32,6 @@ $routing = [
         'controller' => '404',
         'secure' => false
     ]
-
 ];
 
 if (isset($_GET['page'])) {

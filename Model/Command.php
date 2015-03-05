@@ -4,17 +4,13 @@ namespace Model;
 
 class Command extends Factory{
     private $ID;
-    private $Produit;
+    private $Produit = Array();
     private $User;
     private $Quantite;
     private $Date;
 
-    public function __construct($ID, $Produit, $User, $Quantite, $Date){
-        $this->ID = $ID;
-        $this->Produit = $Produit;
-        $this->User = $User;
-        $this->Quantite = $Quantite;
-        $this->Date = $Date;
+    public function __construct(){
+
     }
 
     public function getID(){
@@ -56,6 +52,12 @@ class Command extends Factory{
     public function setDate($Date){
         $this->Date = $Date;
     }
+
+    public function addProduit(Produit $produit){
+        array_push($this->Produit,$produit);
+    }
+
+    //public function
 }
 
 ?>

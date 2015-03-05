@@ -1,4 +1,9 @@
 <?php
+session_start();
+require_once('../autoload.php');
+require_once('../Function/function.php');
+$_SESSION['Panier'] = new \Model\Command();
+
 $routing = [
     'home' => [
         'controller' => 'home',
@@ -90,7 +95,6 @@ $routing = [
         <div id="blocjaune">
             <div id="partielogo">
                 <a href="trainapp.html"><img src="../Vue/style/img/logo.png" id="logo"></a>
-                <p class="slogan"> Be co,<br>Be trend </p>
             </div>
             <div id="partieli">
                 <p class="margin20">Vous connecter avec nous :</p>
@@ -102,7 +106,6 @@ $routing = [
                     <li><a href="http://localhost/Projet/TrainApp/Controlleur/index.php?page=purchase" class="lienBleu">Mon panier</a></li>
                     <li><a href="http://localhost/Projet/TrainApp/Controlleur/index.php?page=shop" class="lienBleu">Shop</a></li>
                     <li><a href="http://localhost/Projet/TrainApp/Controlleur/index.php?page=contact" class="lienBleu">Nous contacter</a></li>
-                    <li><a href="http://localhost/Projet/TrainApp/Controlleur/index.php?page=professional" class="lienBleu">Espace pro</a></li>
                     <li><a href="http://localhost/Projet/TrainApp/Controlleur/index.php?page=propos" class="lienBleu">A propos</a></li>
                 </ul>
             </div>

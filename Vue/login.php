@@ -21,11 +21,10 @@ if(!empty($_POST)){
         if(!isset($_POST['password'])){
             echo "Veuillez renseigner un mot de passe";
         }else {
+
             $user = \Model\User::checkUserExist($_POST['mail'], $_POST['password']);
             if($user['result'] == true){
-                $_SESSION['user'] = $user['Mail'];
-                $_SESSION['pays'] = $user['PaysID'];
-                $_SESSION['Pro'] = $user['Professionel'];
+                $_SESSION['ID'] = $user['ID'];
             }else{
                 echo "Aucun utilisateur ne correspond à ces identifiants.";
             }

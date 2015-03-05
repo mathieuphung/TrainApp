@@ -57,8 +57,8 @@ class Feedback extends Factory{
         $this->User_ID = $User_ID;
     }
 
-    public function sendFeedback(){
-        //coming soon
+    public static function sendFeedback(){
+
     }
 
 }

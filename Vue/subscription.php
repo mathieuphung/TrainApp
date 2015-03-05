@@ -59,9 +59,6 @@
 <script type="text/javascript" src="script/script_sub.js"></script>
 
 <?php
-require_once('../autoload.php');
-require_once('../function/function.php');
-session_start();
 
 if(!empty($_POST)){
     if(!isset($_POST['mail'])){

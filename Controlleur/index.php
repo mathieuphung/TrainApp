@@ -46,6 +46,7 @@ $routing = [
     ]
 ];
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,13 +64,16 @@ $routing = [
     else {
         $page = 'home';
     }
+
     $cssController = '../Vue/style/' . $routing[$page]['controller'] . '.css';
+
     if (file_exists($cssController)) {
         echo '<link href="' . $cssController . '" type="text/css" rel="stylesheet">';
     } else {
         echo 'File is missing';
     }
     ?>
+
     <title> Homepage </title>
 </head>
 <body>
@@ -100,15 +104,19 @@ $routing = [
             echo '<script language="javascript">';
             echo 'alert("Veuillez vous identifier pour pouvoir accéder à cette page")';
             echo '</script>';
+
             header("location: http://localhost/Projet/TrainApp/Controlleur/index.php?page=login");
         }
+
         $fileController = '../Vue/' . $routing[$page]['controller'] . '.php';
+
         if (file_exists($fileController)) {
             require($fileController);
         } else {
             echo 'File is missing';
         }
         ?>
+
     </div>
 </div>
 <div class="footer">
@@ -119,3 +127,4 @@ $routing = [
     </div>
 </div>
 </body>
+</html>

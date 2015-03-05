@@ -56,6 +56,8 @@ class Command extends Factory{
     public function addProduit(Produit $produit){
         array_push($this->Produit,$produit);
     }
+
+    //public function
 }
 
 ?>

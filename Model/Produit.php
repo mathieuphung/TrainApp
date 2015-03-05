@@ -4,7 +4,7 @@ namespace Model;
 
 class Produit extends Factory{
     private $ID;
-    private  $Nom;
+    private $Nom;
     private $Desc;
     private $Prix;
     private $Stock;

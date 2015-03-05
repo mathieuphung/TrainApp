@@ -1,4 +1,9 @@
 <?php
+session_start();
+require_once('../autoload.php');
+require_once('../Function/function.php');
+$_SESSION['Panier'] = new \Model\Command();
+
 $routing = [
     'home' => [
         'controller' => 'home',
@@ -105,7 +110,7 @@ $routing = [
             echo 'alert("Veuillez vous identifier pour pouvoir accéder à cette page")';
             echo '</script>';
 
-            header("location: http://localhost/Projet/TrainApp/Controlleur/index.php?page=login");
+            header("location: http://localhost/TrainApp/Controlleur/index.php?page=login");
         }
 
         $fileController = '../Vue/' . $routing[$page]['controller'] . '.php';

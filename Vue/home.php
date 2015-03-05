@@ -1,7 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: user
- * Date: 04/03/2015
- * Time: 20:06
- */
+<div class="concept">
+    <h2>Notre concept</h2>
+    <p>ssssssssssssssssssssssssssssssssssssssssssssss ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
+</div>

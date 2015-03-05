@@ -1,0 +1,19 @@
+h2 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    font-size: 25px;
+}
+
+.case {
+    width: 310px;
+    height: 25px;
+    border: 1px solid #d1cfcf;
+    border-radius: 2px;
+    margin: 10px;
+}

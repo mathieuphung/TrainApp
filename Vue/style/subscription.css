@@ -1,0 +1,22 @@
+h2 {
+    text-align: center;
+}
+
+.case {
+    width: 310px;
+    height: 25px;
+    border: 1px solid #d1cfcf;
+    border-radius: 2px;
+    margin: 10px;
+}
+
+.pre {
+    width: 65px;
+    height: 25px;
+    margin-right: 30px;
+}
+
+.phone {
+    width: 215px;
+    height: 25px;
+}

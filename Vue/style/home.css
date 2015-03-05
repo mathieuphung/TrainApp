@@ -1,0 +1,17 @@
+.concept {
+    display: inline-block;
+    margin: 0 50px ;
+    width: 490px;
+    word-wrap: break-word;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 18px;
+}

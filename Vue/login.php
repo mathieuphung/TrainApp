@@ -1,8 +1,11 @@
+<head><link href="../Vue/style/login.css" type="text/css" rel="stylesheet"></head>
+
+
 <h2>Se connecter</h2>
 <form action="" method="POST" name="form">
-    <label>Adresse mail: </label><input type="text" name="mail" >
-    <label>Mot de passe: </label><input type="password" name="password">
-    <input type="submit">
+    <label>Adresse mail: </label><input type="text" name="mail" class="case"><br>
+    <label>Mot de passe: </label><input type="password" name="password" class="case"><br>
+    <input type="submit" class="btn">
 </form>
 
 <?php

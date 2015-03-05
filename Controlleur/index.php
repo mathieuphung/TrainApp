@@ -24,6 +24,10 @@ $routing = [
         'controller' => 'profile',
         'secure' => true
     ],
+    'shop' => [
+        'controller' => 'shop',
+        'secure' => true
+    ],
     'contact' => [
         'controller' => 'contact',
         'secure' => true
@@ -74,10 +78,27 @@ $routing = [
 </head>
 <body>
 <div class="wrapper">
-    <div class="content">
-        <div class="header">
-
+    <div class="header">
+        <div id="blocjaune">
+            <div id="partielogo">
+                <a href="trainapp.html"><img src="../Vue/style/img/logo.png" id="logo"></a>
+            </div>
+            <div id="partieli">
+                <p class="margin20">Vous connecter avec nous :</p>
+                <div id="line"><ul>
+                        <li><a href="http://localhost/Projet/TrainApp/Controlleur/index.php?page=subscription" class="lienNoir">S'inscrire</a></li>
+                        <li><a href="http://localhost/Projet/TrainApp/Controlleur/index.php?page=login" class="lienNoir">Se connecter</a></li>
+                    </ul></div>
+                <ul>
+                    <li><a href="http://localhost/Projet/TrainApp/Controlleur/index.php?page=purchase" class="lienBleu">Mon panier</a></li>
+                    <li><a href="http://localhost/Projet/TrainApp/Controlleur/index.php?page=shop" class="lienBleu">Shop</a></li>
+                    <li><a href="http://localhost/Projet/TrainApp/Controlleur/index.php?page=contact" class="lienBleu">Nous contacter</a></li>
+                    <li><a href="http://localhost/Projet/TrainApp/Controlleur/index.php?page=propos" class="lienBleu">A propos</a></li>
+                </ul>
+            </div>
         </div>
+    </div>
+    <div class="content">
         <?php
             if ($routing[$page]['secure'] === true && !isset($_SESSION['name'])) {
                 echo '<script language="javascript">';

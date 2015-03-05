@@ -1,5 +1,7 @@
 h2 {
     text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
 }
 
 form {
@@ -16,4 +18,13 @@ label {
     border: 1px solid #879596;
     border-radius: 2px;
     margin: 10px;
+}
+
+.btn {
+    height: 45px;
+    font-size: 22px;
+    width: 200px;
+    background: #3d91a8;
+    border-radius: 8px;
+    margin-top: 50px;
 }

@@ -51,6 +51,7 @@ table {
 body {
     background: #f3eeea;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
 /*------------------wrapper------------------*/
@@ -58,6 +59,100 @@ body {
 .wrapper {
     margin: auto;
     width: 1400px;
+}
+
+/*------------------header------------------*/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#header {
+    font-size: 22px;
+    text-decoration: bold;
+}
+
+#blocjaune {
+    height: 235px;
+    width: 1070px;
+    background-color: #fcce30;
+    margin: auto;
+}
+
+#logo {
+    margin-left: 65px;
+    margin-top: 10px;
+    height: 80%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.lienNoir {
+    margin : 55px 0px 0px 44px;
+    float: right;
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.lienBleu {
+    margin : 60px 20px 0px 20px;
+    float: right;
+    color : #3d91a8;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#partielogo {
+    width: 470px;
+    height: 235px;
+    display: inline-block;
+}
+
+#partieli {
+    width: 600px;
+    height: 235px;
+    float: right;
+    text-align: right;
+}
+
+.droite {
+    float: right;
+}
+
+#line {
+    width: 350px;
+}
+
+.margin20 {
+    margin: 17px;
+    font-size: 20px;
+}
+
+body td {
+    padding : 7px;
+}
+
+body table {
+    margin: 20px;
+    margin: auto;
+}
+
+body h1 {
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#fr {
+    border-radius: 50%;
+    background-image: url(\img\france.jpg);
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
 }
 
 /*------------------content------------------*/

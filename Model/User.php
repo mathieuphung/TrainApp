@@ -9,7 +9,15 @@ class User extends Factory{
     protected $Mail;
     protected $Sub;
     protected $Pays;
-    private $db;
+    protected $name;
+    protected $firstname;
+    protected $birthday;
+    protected $adress;
+    protected $cp;
+    protected $town;
+    protected $company;
+    protected $fix;
+    protected $por;
 
     /**
      * @param $Password
@@ -18,13 +26,21 @@ class User extends Factory{
      * @param $Sub
      * @param $Pays
      */
-    public function __construct($Password, $Pro, $Mail, $Sub, $Pays){
+    public function __construct($Password, $Pro, $Mail, $Sub, $Pays,$name, $firstname, $birthday, $adress, $cp, $town, $company, $fix, $por){
         $this->Password = $Password;
         $this->Pro = $Pro;
         $this->Mail = $Mail;
         $this->Sub = $Sub;
         $this->Pays = $Pays;
-        self::saveUserDB();
+        $this->name = $name;
+        $this->firstname = $firstname;
+        $this->birthday = $birthday;
+        $this->adress = $adress;
+        $this->cp = $cp;
+        $this->town = $town;
+        $this->company = $company;
+        $this->fix = $fix;
+        $this->por = $por;
     }
 
     public function getID(){
@@ -77,17 +93,61 @@ class User extends Factory{
     public function setPays($Pays){
         $this->Pays = $Pays;
     }
+    public function getNom(){
+        return $this->name;
+    }
+
+    public function getPrenom(){
+        return $this->firstname;
+    }
+
+    public function getDate(){
+        return $this->birthday;
+    }
+
+    public function getAdresse(){
+        return $this->adress;
+    }
+
+    public function getCP(){
+        return $this->cp;
+    }
+
+    public function getVille(){
+        return $this->town;
+    }
+
+    public function getEntreprise(){
+        return $this->company;
+    }
+
+    public function getFix(){
+        return $this->fix;
+    }
+
+    public function getPor(){
+        return $this->por;
+    }
 
     public function saveUserDB(){
-        $stmt = self::getMysqlConnexion()->prepare('INSERT INTO user  VALUES(:login,:password,:pro,:mail,:abo,:pays)');
-        $stmt->bindParam(':login', $this->Login);
+        $stmt = self::getMysqlConnexion()->prepare('INSERT INTO user  VALUES("",:password,:pro,:mail,:abo,:pays, :nom, :firstname, :birthday, :adress, :cp, :town,:company,:fix,:por)');
         $stmt->bindParam(':password', $this->Password);
         $stmt->bindParam(':pro', $this->Pro);
         $stmt->bindParam(':mail', $this->Mail);
         $stmt->bindParam(':abo', $this->Sub);
         $stmt->bindParam(':pays', $this->Pays);
+        $stmt->bindParam(':nom', $this->name);
+        $stmt->bindParam(':firstname', $this->firstname);
+        $stmt->bindParam(':birthday', $this->birthday);
+        $stmt->bindParam(':adress', $this->adress);
+        $stmt->bindParam(':cp', $this->cp);
+        $stmt->bindParam(':town', $this->town);
+        $stmt->bindParam(':company', $this->company);
+        $stmt->bindParam(':fix', $this->fix);
+        $stmt->bindParam(':por', $this->por);
         if ($stmt->execute()) {
-            return true;
+            //debug
+            return $stmt->lastInsertId();
         } else {
             return false;
         }
@@ -108,6 +168,44 @@ class User extends Factory{
         return $retour;
     }
 
+    public static function getUserByID($ID){
+        $stmt = self::getMysqlConnexion()->prepare("SELECT * FROM user WHERE ID = :ID");
+        $stmt->bindParam(':ID', $ID);
+        $stmt->execute();
+        if($stmt->rowCount() != 0){
+            $data = $stmt->fetch();
+            $retour["result"] = true;
+            $retour = array_merge($retour,$data);
+        }else{
+            $retour['result'] = false;
+        }
+        return $retour;
+    }
+
+    public function changeUser($ID){
+        $stmt = self::getMysqlConnexion()->prepare('UPDATE user  SET Password = :password, Professionel = :pro, Mail = :mail, Abonne = :abo, PaysID = :pays, nom =  :nom, prenom = :firstname, birthday = :birthday, adresse =  :adress, codePostal = :cp, ville = :town, entreprise = :company, telFix = :fix, telPor = :por WHERE ID = :ID)');
+        $stmt->bindParam(':password', $this->Password);
+        $stmt->bindParam(':pro', $this->Pro);
+        $stmt->bindParam(':mail', $this->Mail);
+        $stmt->bindParam(':abo', $this->Sub);
+        $stmt->bindParam(':pays', $this->Pays);
+        $stmt->bindParam(':nom', $this->name);
+        $stmt->bindParam(':firstname', $this->firstname);
+        $stmt->bindParam(':birthday', $this->birthday);
+        $stmt->bindParam(':adress', $this->adress);
+        $stmt->bindParam(':cp', $this->cp);
+        $stmt->bindParam(':town', $this->town);
+        $stmt->bindParam(':company', $this->company);
+        $stmt->bindParam(':fix', $this->fix);
+        $stmt->bindParam(':por', $this->por);
+        $stmt->bindParam(':ID', $ID);
+        if ($stmt->execute()) {
+            //debug
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
 

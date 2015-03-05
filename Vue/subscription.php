@@ -38,12 +38,12 @@
     <tr>
         <td><label>Adresse de l'Entreprise</label></td>
         <td><input type="text" name="adr_1" class="case"></td>
-        <td rows="2" cols="2"><input type="checkbox" name="Sub" value="true" checked="checked" class="case"><label> J'autorise ACME à m'envoyer des newsletter par mail et par SMS</label></td>
+        <td rows="2" cols="2"><input type="checkbox" name="Sub" value="true" checked="checked"><label> J'autorise ACME à m'envoyer des newsletter par mail et par SMS</label></td>
     </tr>
     <tr>
-        <td>none</td>
+        <td>Pseudonyme</td>
         <td><input type="text" name="adr_2" class="case"></td>
-        <td rows="2" cols="2"><input type="checkbox" name="Sub" value="true" checked="checked" class="case"><label>Je souhaite recevoir des informations liées à la licence et aux offres ACME</label></td>
+        <td rows="2" cols="2"><input type="checkbox" name="Sub" value="true" checked="checked"><label>Je souhaite recevoir des informations liées à la licence et aux offres ACME</label></td>
     </tr>
     <tr>
         <td><label>Code postal</label></td>

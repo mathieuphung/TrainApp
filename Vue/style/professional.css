@@ -1,0 +1,25 @@
+.titleDiv {
+    height: 100px;
+    width: 100%;
+    margin-left: 30px;
+}
+
+.title {
+    font-size: 30px;
+    position: relative;
+    top: -10px;
+    left: 10px;
+    display: inline-block;
+}
+
+.beacon {
+    margin: 0 100px;
+}
+
+.text {
+    float: right;
+    margin-top: 150px;
+    width: 710px;
+    font-size: 30px;
+    text-indent: 60px;
+}

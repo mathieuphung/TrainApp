@@ -33,11 +33,12 @@ table {
 }
 
 .btn {
+    color: #fff;
+    background: #1c8b52;
+    border-radius: 50px;
     float: right;
     height: 45px;
     font-size: 22px;
     width: 200px;
-    background: #3d91a8;
-    border-radius: 8px;
     margin-right: 10px;
 }

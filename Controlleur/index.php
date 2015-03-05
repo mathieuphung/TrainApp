@@ -12,12 +12,20 @@ $routing = [
         'controller' => 'login',
         'secure' => false
     ],
+    'propos' => [
+        'controller' => 'propos',
+        'secure' => false
+    ],
+    'panier' => [
+        'controller' => 'panier',
+        'secure' => false
+    ],
     'profile' => [
         'controller' => 'profile',
         'secure' => true
     ],
-    'feedback' => [
-        'controller' => 'feedback',
+    'contact' => [
+        'controller' => 'contact',
         'secure' => true
     ],
     'professional' => [
